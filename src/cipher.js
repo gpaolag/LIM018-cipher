@@ -6,23 +6,30 @@ const cipher = {
   encode:function(){
     let encodeWord="";
     // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
-    if (this.positionCipher==26){
+    if (this.positionCipher==26 || this.positionCipher==-26){
       //console.log(this.wordCipher);
       return this.wordCipher;
     }
 
     //en caso el valor del numero sea mayor al total del abecedario, realiza un modulo para obtener el valor optimo
-    if (this.positionCipher>26){
+    else if (this.positionCipher>26){
       let temp=this.positionCipher%26;
       this.positionCipher=temp;
     }
 
     //en caso el valor sea negativo, suma el valor de 26 para obtener el numero correcto a recorrer
-    if (this.positionCipher<0) {
-      let temp=this.positionCipher+27;
+    else if (this.positionCipher<0 && this.positionCipher>-26) {
+      let temp=this.positionCipher+26;
       this.positionCipher=temp;
     }
-    console.log(this.positionCipher);
+
+    //en este caso se considera a un numero negativo menor a -26 para primero reducirlo y posterior convertirlo en un numero positivo para recorrer el correcto
+    else if (this.positionCipher<-26){
+      let temp=this.positionCipher%26;
+      temp=temp+26;
+      this.positionCipher=temp;
+    }
+
     //separamos la palabra original en un array
     let wordSep = this.wordCipher.split('');
     //creamos el arrary que modificaremos
@@ -31,30 +38,31 @@ const cipher = {
     //guardamos el array original
     let abc= nuevo.slice();
     //extraemos los valores segun la posicion a rotar
-    temp = abc.splice(0,this.positionCipher);
+    let temp = abc.splice(0,this.positionCipher);
     //agregamos esos valores al abecedario a modificar
-    temp.forEach(function(elemento, indice, array) {
-      abc.push(elemento);
-    })
+    for (var elemento of temp){
+      //temp.forEach(function(elemento, indice, array) {
+        abc.push(elemento);
+    }
     
     //limpiamos temp
     temp.splice(0, temp.length);
     
     //recorremos el array de la palabra y ubicamos su posicion en el abecedario original, luego con la posicion ubico en el array modificado el valor nuevo, todo se guarda en un array
-    wordSep.forEach(function(elemento, indice, array){
-      temp.push(abc[nuevo.indexOf(elemento)]);
-    })
+    for (var elemento2 of wordSep){
+      temp.push(abc[nuevo.indexOf(elemento2)]);
+    }
 
     //junto todo el array en una palabra para devolver
     encodeWord=temp.join('');
-    console.log(encodeWord);
+    return encodeWord;
+    //console.log(encodeWord);
   }
 };
 
-let nuevo= Object.create(cipher);
-nuevo['wordCipher']="casa";
-nuevo['positionCipher']=-24;
-nuevo.encode();
+cipher['wordCipher']="casa";
+cipher['positionCipher']=-49;
+cipher.encode();
 //console.log(nuevo.encode());
 
 //export default cipher;
