@@ -10,7 +10,7 @@ cipher.encode=function(positionCipher, wordCipher){
   // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
   if (positionCipher==26 || positionCipher==-26){
     //console.log(this.wordCipher);
-    return wordCipher;
+    return wordCipher.toUpperCase();
   }
 
   //en caso el valor del numero sea mayor al total del abecedario, realiza un modulo para obtener el valor optimo
@@ -68,7 +68,7 @@ cipher.decode=function(positionCipher, wordCipher){
   // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
   if (positionCipher==26 || positionCipher==-26){
     //console.log(this.wordCipher);
-    return wordCipher;
+    return wordCipher.toUpperCase();
   }
 
   //en caso el valor del numero sea mayor al total del abecedario, realiza un modulo para obtener el valor optimo
@@ -120,10 +120,10 @@ cipher.decode=function(positionCipher, wordCipher){
   //console.log(encodeWord);
 }
 
+//console.log(typeof cipher.encode);
+//cipher['wordCipher']="fdvd";
+//cipher['positionCipher']=3;
+//let resp= cipher.decode(cipher.positionCipher, cipher.wordCipher);
+//console.log(resp);
 
-cipher['wordCipher']="fdvd";
-cipher['positionCipher']=3;
-let resp= cipher.decode(cipher.positionCipher, cipher.wordCipher);
-console.log(resp);
-
-//export default cipher;
+export default cipher;

@@ -13,7 +13,7 @@ describe('cipher', () => {
   });
 
   describe('cipher.encode', () => {
-
+    
     it('should be a function', () => {
       expect(typeof cipher.encode).toBe('function');
     });
@@ -27,6 +27,18 @@ describe('cipher', () => {
 
     it('should return "HIJKLMNOPQRSTUVWXYZABCDEFG" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset 33', () => {
       expect(cipher.encode(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
+    });
+
+    it('should return "HIJKLMNOPQRSTUVWXYZABCDEFG" for "HIJKLMNOPQRSTUVWXYZABCDEFG" with offset -26', () => {
+      expect(cipher.encode(-26, 'HIJKLMNOPQRSTUVWXYZABCDEFG')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
+    });
+
+    it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "DEFGHIJKLMNOPQRSTUVWXYZABC" with offset -23', () => {
+      expect(cipher.encode(-23, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('DEFGHIJKLMNOPQRSTUVWXYZABC');
+    });
+
+    it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "ZABCDEFGHIJKLMNOPQRSTUVWXY" with offset -27', () => {
+      expect(cipher.encode(-27, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('ZABCDEFGHIJKLMNOPQRSTUVWXY');
     });
 
     // Hacker edition
@@ -73,6 +85,18 @@ describe('cipher', () => {
 
     it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "HIJKLMNOPQRSTUVWXYZABCDEFG" with offset 33', () => {
       expect(cipher.decode(33, 'HIJKLMNOPQRSTUVWXYZABCDEFG')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    });
+
+    it('should return "HIJKLMNOPQRSTUVWXYZABCDEFG" for "HIJKLMNOPQRSTUVWXYZABCDEFG" with offset 26', () => {
+      expect(cipher.decode(26, 'HIJKLMNOPQRSTUVWXYZABCDEFG')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
+    });
+
+    it('should return "DEFGHIJKLMNOPQRSTUVWXYZABC" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset -23', () => {
+      expect(cipher.decode(-23, 'DEFGHIJKLMNOPQRSTUVWXYZABC')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    });
+
+    it('should return "ZABCDEFGHIJKLMNOPQRSTUVWXY" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset -27', () => {
+      expect(cipher.decode(-27, 'ZABCDEFGHIJKLMNOPQRSTUVWXY')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
     });
 
     //
