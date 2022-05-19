@@ -6,12 +6,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-      <input type="text" id="words" value="casa"> 
-      <input type="number" id="position" value="3"> 
-      <button type="button" onclick="encode(words.value,position.value)"></button>
-      <p id="resp"></p>
+    <header>
+      <div class="logom"><img src="images/cerrar.png" ></div>
+      <div class="titulo">Mensajes Secretos</div></header>
+    <div id="root" class="inicio">
+      <div class="md5">
+        <h1>Hello world!</h1>
+      </div>
+      <div class="md5 pantalla">
+        <div class="llave"> 
+          <h2>Numero llave del codigo</h2>
+        </div>
+        <div>
+          <input type="text" id="words" value="casa"> 
+          <input type="number" id="position" value="3"> 
+          <button class="botones" type="button" id="btncifrar"> CIFRAR </button>
+          <button class="botones" type="button" id="btndecifrar"> DECIFRAR </button>
+          <p id="resp"></p>
+        </div>
+      </div>
+      
     </div>
     <script src="index.js" type="module"></script>
   </body>
