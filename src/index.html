@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" >
   </head>
   <body>
     <header>
@@ -15,14 +16,25 @@
       </div>
       <div class="md5 pantalla">
         <div class="llave"> 
-          <h2>Numero llave del codigo</h2>
+          <h2 class="textollave div2">Numero llave del codigo </h2>
+          <input class="inp div2" type="number" id="position" value="3"> <i class="fa fa-key fa-2x"> </i>
         </div>
-        <div>
-          <input type="text" id="words" value="casa"> 
-          <input type="number" id="position" value="3"> 
-          <button class="botones" type="button" id="btncifrar"> CIFRAR </button>
-          <button class="botones" type="button" id="btndecifrar"> DECIFRAR </button>
-          <p id="resp"></p>
+        <div class ="mensaje" >
+          <h2 class="titulos ">Mensaje : </h2>
+        </div>
+        <div class ="mensajes">
+          <textarea class="textmensaje" name="textarea" id="words" rows="5" cols="40">casa</textarea>          
+        </div>
+        <div class ="esbotones">
+          <button class="botones" type="button" id="btncifrar"><i class="fa fa-lock"></i> CIFRAR </button>
+          <button class="botones" type="button" id="btndecifrar"><i class="fa fa-unlock"></i> DECIFRAR </button>
+          
+        </div>
+        <div class ="mensaje" >
+          <h2 class="titulos ">Resultado : </h2>
+        </div>
+        <div class ="mensajes">
+          <textarea class="textmensaje" name="textarea" id="res" rows="5" cols="40"></textarea> 
         </div>
       </div>
       

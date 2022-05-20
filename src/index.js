@@ -11,11 +11,12 @@ btncifrar.addEventListener("click",cifrar);
 function cifrar(){
   const wordc= document.getElementById('words').value;
   const offset= document.getElementById('position').value;
-  document.getElementById("resp").innerHTML = cipher.encode(offset,wordc);
+  document.getElementById("res").value = cipher.encode(offset,wordc);
 }
 
 function decifrar(){
   const wordde= document.getElementById('words').value;
   const offsetde= document.getElementById('position').value;
-  document.getElementById("resp").innerHTML = cipher.decode(offsetde,wordde);
+  document.getElementById("res").value = cipher.decode(offsetde,wordde);
 }
+
