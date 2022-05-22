@@ -2,44 +2,92 @@ html, body {
   height: 100%;
   width: 100%;
 }
-h2 ,p, h1 {
+h2 , h1 {
   padding:0px;
   margin: 0px;
 }
+p {
+  margin-bottom:10px;
+}
 header {
   display: inline-block;
-  background: rgba(203, 66, 148, 0.91);
+  background: #003F77;
   width:100%;
 }
 .logom {
   display: inline-block;
-  padding: 30px;
+  padding: 10px;
+  margin-left:30px;
+  border-radius:50px;
+  background:#fff;
 }
 .titulo {
   display: inline-block;
-  padding-left: 30px;
+  padding: 20px;
   text-align: left;
   font-family: Days One;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 30px;
+  color:#fff;
 }
 .inicio {
-  width:100% !important;
-  height:400px !important;
-  display: grid;
+  display:grid;
   grid-template-columns: 1fr 1fr;
-
+  width:100%;
+}
+@media only screen and (max-width: 700px){
+  .inicio {
+    display: block;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .md5 {
+    width: 100% !important;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    padding-left:0px !important;
+  }
+  .indicaciones {
+    display:block !important;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .bloques {
+    width: 100% !important;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
 }
 .md5 {
-  max-width:100% !important ;
-  display: inline-block;
-  background: #3986BD;
+  width:100%;
+  margin: 0px;
+  justify-content: center !important;
+  background-image: radial-gradient(circle at 61.34% 92.32%, #23c0ff 0, #3378a5 50%, #24384b 100%);
+}
+.indicaciones {
+  display:grid;
+  grid-template-columns: 40% 60%;
+  font-size: 18px;
+  font-family: 'Macondo', cursive;
+  font-weight:400px;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.inmens {
+  background-image: url("images/pergamino.png");
+  max-width:300px;
+  alt:300px !important;
+  margin:30px;
   padding:30px;
-  margin: 0px
+  border-radius:15px;
+  border: 4px solid #977316;
+}
+.bloques {
+  display: block;
+  text-align : center;
 }
 .pantalla {
-  background: linear-gradient(180deg, #2376C0 5.21%, rgba(35, 118, 192, 0.69) 27.08%, rgba(106, 97, 211, 0.81) 50%, rgba(134, 85, 210, 0.69) 67.71%, rgba(162, 66, 203, 0.91) 93.23%);
+  background: #00629c;
+  padding-top:30px;
+  padding-bottom:30px;
 }
+
 .llave {
   display:flex;
   width:100%;
@@ -67,9 +115,10 @@ input {
 .textollave {
   text-align: left;
   font-family: Days One;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 18px;
   padding: 0px 15px 0px 15px;
+  color: #fff;
 }
 .titulos {
   text-align: left;
@@ -96,6 +145,8 @@ input {
   margin-top: 10px;
   display:flex;
   justify-content: center !important;
+  color: #fff;
+  font-weight: 300;
 }
 .esbotones {
   padding: 0px 30px 0px 30px ;
@@ -103,11 +154,33 @@ input {
   justify-content: center !important;
 }
 .botones {
-  background:	#c79331;
+  background:	#c4941d;
   border-radius:10px;
-  border: 2px solid #000;
+  border: 3px solid #000;
   padding: 10px 3px 10px 3px;
   margin: 10px 30px 10px 30px;
   font-size:16px;
   width: 150px;
+  font-weight:600 !important;
+  cursor: pointer;
+}
+.botones:hover {
+  background:#e8c15f;
+  color:	#977316;
+  border-radius:10px;
+  border: 3px solid #977316;
+}
+footer {
+  background-color: #657376;
+  text-align: center;
+  color: aliceblue;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  margin-top: 0px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+a {
+  color:#fff;
+  font-weight:600;
 }

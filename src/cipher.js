@@ -5,6 +5,7 @@ const cipher = {
 };
 
 cipher.encode=function(positionCipher, wordCipher){
+  
   wordCipher= wordCipher.toLowerCase();  
   let encodeWord="";
   // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
@@ -35,6 +36,13 @@ cipher.encode=function(positionCipher, wordCipher){
   //separamos la palabra original en un array
   
   let wordSep = wordCipher.split('');
+  //encuentro posiciones vacias
+  let empty=[];
+  wordSep.forEach(function (element, index) {
+    if (element===' '){
+      empty.push(index);
+    }
+  });
   //creamos el arrary que modificaremos
   let nuevo = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -44,7 +52,6 @@ cipher.encode=function(positionCipher, wordCipher){
   let temp = abc.splice(0,positionCipher);
   //agregamos esos valores al abecedario a modificar
   for (var elemento of temp){
-    //temp.forEach(function(elemento, indice, array) {
       abc.push(elemento);
   }
   
@@ -55,12 +62,15 @@ cipher.encode=function(positionCipher, wordCipher){
   for (var elemento2 of wordSep){
     temp.push(abc[nuevo.indexOf(elemento2)]);
   }
+  //agregamos espacios en blanco
+  for (var elem of empty){
+    temp.splice(elem,1,' ');  
+  }
 
   //junto todo el array en una palabra para devolver
   encodeWord=temp.join('');
   encodeWord=encodeWord.toUpperCase();
   return encodeWord;
-  //console.log(encodeWord);
 }
 cipher.decode=function(positionCipher, wordCipher){
   wordCipher= wordCipher.toLowerCase();  
@@ -91,7 +101,14 @@ cipher.decode=function(positionCipher, wordCipher){
   }
 
   //separamos la palabra original en un array
-  let wordSep = wordCipher.split('');
+  let wordSep = wordCipher.split('');  
+  //encuentro posiciones vacias
+  let empty=[];
+  wordSep.forEach(function (element, index) {
+    if (element===' '){
+      empty.push(index);
+    }
+  });
   //creamos el arrary que modificaremos
   let nuevo = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -101,7 +118,6 @@ cipher.decode=function(positionCipher, wordCipher){
   let temp = abc.splice(0,positionCipher);
   //agregamos esos valores al abecedario a modificar
   for (var elemento of temp){
-    //temp.forEach(function(elemento, indice, array) {
       abc.push(elemento);
   }
   
@@ -111,6 +127,11 @@ cipher.decode=function(positionCipher, wordCipher){
   //recorremos el array de la palabra y ubicamos su posicion en el abecedario original, luego con la posicion ubico en el array modificado el valor nuevo, todo se guarda en un array
   for (var elemento2 of wordSep){
     temp.push(nuevo[abc.indexOf(elemento2)]);
+  }
+
+  //agregamos espacios en blanco
+  for (var elem of empty){
+    temp.splice(elem,1,' ');  
   }
 
   //junto todo el array en una palabra para devolver

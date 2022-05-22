@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caesar Cipher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" >
   </head>
@@ -10,11 +12,20 @@
     <header>
       <div class="logom"><img src="images/cerrar.png" ></div>
       <div class="titulo">Mensajes Secretos</div></header>
-    <div id="root" class="inicio">
-      <div class="md5">
-        <h1>Hello world!</h1>
+    <section>
+      <div id="root" class="inicio">
+        <div class="md5 indicaciones">
+        <div class="bloques">
+          <img src="images/niño.png" width="250" alt="450">
+        </div >
+        <div class="bloques">
+          <div class="inmens">
+          <p >Imagina poder enviar mensajitos a otros pero que esten cifrados y solo puedan leerlo con una clave secreta. </p>
+          <p>Ahora es posible con mensajes secretos, ingresa tu mensaje y el numero de llave, cifraremos tu mensaje y te lo mostraremos para que puedas enviarlo.</p>
+          <p>Ven y disfruta</p></div>
+        </div>
       </div>
-      <div class="md5 pantalla">
+        <div class="md5 pantalla">
         <div class="llave"> 
           <h2 class="textollave div2">Numero llave del codigo </h2>
           <input class="inp div2" type="number" id="position" value="3"> <i class="fa fa-key fa-2x"> </i>
@@ -37,8 +48,13 @@
           <textarea class="textmensaje" name="textarea" id="res" rows="5" cols="40"></textarea> 
         </div>
       </div>
-      
-    </div>
+      </div>
+    </section>
+    <footer >
+      <p class="copyright-text">Copyright &copy; 2022 Desarrollado por Paola Gamarra 
+      </p>
+      <p><a href="mailto:glenypaola.7@gmail.com">glenypaola.7@gmail.com</a></p>
+    </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
