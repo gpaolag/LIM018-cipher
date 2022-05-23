@@ -5,7 +5,7 @@ const cipher = {
 };
 
 cipher.encode=function(positionCipher, wordCipher){
-  
+  positionCipher=parseInt(positionCipher);
   wordCipher= wordCipher.toLowerCase();  
   let encodeWord="";
   // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
@@ -73,6 +73,7 @@ cipher.encode=function(positionCipher, wordCipher){
   return encodeWord;
 }
 cipher.decode=function(positionCipher, wordCipher){
+  positionCipher=parseInt(positionCipher);
   wordCipher= wordCipher.toLowerCase();  
   let encodeWord="";
   // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
@@ -140,6 +141,7 @@ cipher.decode=function(positionCipher, wordCipher){
   return encodeWord;
   //console.log(encodeWord);
 }
+
 
 //console.log(typeof cipher.encode);
 //cipher['wordCipher']="fdvd";
