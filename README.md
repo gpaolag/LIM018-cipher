@@ -1,18 +1,54 @@
 # Cifrado César
 
+README PROYECTO
+#INICIO DEL PROCESO:
+
+FASE 1
+Definir usuarios y sus acciones en el proyecto.
+Definir los datos requeridos para realizar los objetivos del usuario
+Prototipado de un posible producto
+Diseño de funciones y flujo de datos
+Desarrollo de funciones
+Prueba de funciones
+
+FASE 2
+Desarrollo de prototipo basico
+Prueba de funcionamiento
+Desarrollo de prototipo mejorado
+Consideraciones de terminos agregados
+
+FASE 3
+Hacker Edition
+Prueba de Hacker Edition
+
+USUARIOS
+-Cualquier persona que desee usar un cifrador de mensajes para poder evitar decir un mensaje
+de forma directa.
+-Cualquier persona que desee usar el decifrador para un mensaje que tenga cifrado.
+
+OBJETIVOS
+
+-Cifrar / Decifrar mensajes de un usuario.
+-Crear un metodo de confidencialidad de un mensaje que permite al usuario tener una comunicacion privacidad
+
+Flujo del proceso:
+Usuario ingresa un valor de mensaje tipo string, ingresa un valor numerico de llave.
+Usuario selecciona lo que desea hacer, metodo encode o decode
+Usuario obtiene el mensaje cifrado o decifrado
+
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+- [1. Preámbulo](#1-preámbulo)
+- [2. Resumen del proyecto](#2-resumen-del-proyecto)
+- [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+- [4. Consideraciones generales](#4-consideraciones-generales)
+- [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+- [6. Hacker edition](#6-hacker-edition)
+- [7. Consideraciones técnicas](#7-consideraciones-técnicas)
+- [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+- [9. Checklist](#9-checklist)
 
-***
+---
 
 ## 1. Preámbulo
 
@@ -30,10 +66,10 @@ es reemplazada por otra que se encuentra un número fijo de posiciones
 
 Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
-* La letra A se cifra como D.
-* La palabra CASA se cifra como FDVD.
-* Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+- La letra A se cifra como D.
+- La palabra CASA se cifra como FDVD.
+- Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+- Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 
 En la actualidad, todos los cifrados de sustitución simple se descifran con
 mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la
@@ -52,11 +88,11 @@ necesitaría cifrar un mensaje y pensar en cómo debe ser esa experiencia de uso
 (qué pantallas, explicaciones, mensajes, colores, ¿marca?) etc. Algunas ideas de
 ejemplo:
 
-* Crear claves seguras para el email.
-* Encriptar/cifrar una tarjeta de crédito.
-* Herramienta de mensajería interna de una organización de derechos humanos en
+- Crear claves seguras para el email.
+- Encriptar/cifrar una tarjeta de crédito.
+- Herramienta de mensajería interna de una organización de derechos humanos en
   una zona de conflicto.
-* Mensajería secreta para parejas.
+- Mensajería secreta para parejas.
 
 Trabajando en parejas aprenderán a construir una aplicación web que interactuará
 con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
@@ -70,131 +106,131 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Uso de HTML semántico**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+  - [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
+  - [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+  </p></details>
 
 ### CSS
 
 - [ ] **Uso de selectores de CSS**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
+  - [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
+  - [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
+  </p></details>
 
 - [ ] **Modelo de caja (box model): borde, margen, padding**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+  - [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
+  - [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+  - [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
+  - [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
+  </p></details>
 
 ### Web APIs
 
 - [ ] **Uso de selectores del DOM**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+  - [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
+  - [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
+  - [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+  </p></details>
 
 - [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
+  - [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
+  - [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
+  - [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
+  - [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
+  </p></details>
 
 - [ ] **Manipulación dinámica del DOM**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
+  - [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
+  - [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
+  - [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
+  - [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
+  - [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
+  - [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
+  </p></details>
 
 ### JavaScript
 
 - [ ] **Tipos de datos primitivos**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Valores primitivos - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures#valores_primitivos)
-</p></details>
+  - [Valores primitivos - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures#valores_primitivos)
+  </p></details>
 
 - [ ] **Strings (cadenas de caracteres)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Strings](https://curriculum.laboratoria.la/es/topics/javascript/06-strings)
-  * [String — Cadena de caracteres - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-</p></details>
+  - [Strings](https://curriculum.laboratoria.la/es/topics/javascript/06-strings)
+  - [String — Cadena de caracteres - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String)
+  </p></details>
 
 - [ ] **Variables (declaración, asignación, ámbito)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
+  - [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
+  - [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
+  </p></details>
 
 - [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
+  - [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
+  - [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
+  </p></details>
 
 - [ ] **Uso de bucles/ciclos (while, for, for..of)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
+  - [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
+  - [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
+  </p></details>
 
 - [ ] **Funciones (params, args, return)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
+  - [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
+  - [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
+  - [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
+  - [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
+  </p></details>
 
 - [ ] **Pruebas unitarias (unit tests)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
+  - [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
+  </p></details>
 
 - [ ] **Módulos de ECMAScript (ES Modules)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
+  - [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
+  - [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
+  </p></details>
 
 - [ ] **Uso de linter (ESLINT)**
 
@@ -210,10 +246,10 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **GitHub: Despliegue con GitHub Pages**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
+  - [Sitio oficial de GitHub Pages](https://pages.github.com/)
+  </p></details>
 
 ### user-centricity
 
@@ -227,9 +263,9 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ## 4. Consideraciones generales
 
-* El equipo de coaches te dará un tiempo sugerido e indicaciones sobre si trabajar
+- El equipo de coaches te dará un tiempo sugerido e indicaciones sobre si trabajar
   sola o en equipo. Recuerda que cada una aprende a diferente ritmo.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
+- El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no
   te preocupes, lo aprenderás durante este proyecto.
 
@@ -237,36 +273,36 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
-* A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+- A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 ### Definición del producto
 
 En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
 para definir el producto final a nivel de experiencia y de interfaz.
 
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
+- Quiénes son los principales usuarios de producto.
+- Cuáles son los objetivos de estos usuarios en relación con tu producto.
+- Cómo crees que el producto que estás creando está resolviendo sus problemas.
 
 ### Interfaz de usuario (UI)
 
 La interfaz debe permitir al usuario:
 
-* Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que
+- Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que
   el cifrado desplace cada caracter.
-* Insertar un mensaje (texto) que queremos cifrar.
-* Ver el resultado del mensaje cifrado.
-* Insertar un mensaje (texto) a descifrar.
-* Ver el resultado del mensaje descifrado.
+- Insertar un mensaje (texto) que queremos cifrar.
+- Ver el resultado del mensaje cifrado.
+- Insertar un mensaje (texto) a descifrar.
+- Ver el resultado del mensaje descifrado.
 
 ### Scripts / Archivos
 
-* `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
+- `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
   así como una introducción a la aplicación, su funcionalidad y decisiones de
   diseño que tomaron.
-* `src/index.html`: este es el punto de entrada a tu aplicación. Este archivo
+- `src/index.html`: este es el punto de entrada a tu aplicación. Este archivo
   debe contener tu _markup_ (HTML) e incluir el CSS y JavaScript necesario.
-* `src/cipher.js`: acá debes implementar el objeto `cipher`, el cual ya está
+- `src/cipher.js`: acá debes implementar el objeto `cipher`, el cual ya está
   _exportado_ en el _boilerplate_. Este objeto (`cipher`) debe contener dos
   métodos:
   - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
@@ -275,9 +311,9 @@ La interfaz debe permitir al usuario:
   - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
     queremos mover a la izquierda en el alfabeto y `string` el mensaje
     (texto) que queremos descifrar.
-* `src/index.js`: acá debes escuchar eventos del DOM, invocar `cipher.encode()`
+- `src/index.js`: acá debes escuchar eventos del DOM, invocar `cipher.encode()`
   o `cipher.decode()` según sea necesario y actualizar el resultado en la UI.
-* `test/cipher.spec.js`: este archivo contiene algunos tests de ejemplo y acá
+- `test/cipher.spec.js`: este archivo contiene algunos tests de ejemplo y acá
   tendrás que implementar los tests para `cipher.encode()` y `cipher.decode()`.
 
 ## 6. Hacker edition
@@ -303,8 +339,7 @@ también conocido como Vanilla JavaScript.
 Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_
 y _lines_, y un mínimo del 50% de _branches_. El _boilerplate_ ya contiene el
 setup y configuración necesaria para ejecutar los tests (pruebas) así como _code
-coverage_ para ver el nivel de cobertura de los tests usando el comando `npm
-test`.
+coverage_ para ver el nivel de cobertura de los tests usando el comando `npm test`.
 
 El _boilerplate_ incluye tests (pruebas) de ejemplo como punto de partida.
 
@@ -343,7 +378,7 @@ entorno (browser en este caso) y las [reglas recomendadas (`"eslint:recommended"
 En cuanto a reglas/guías de estilo en sí,
 usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
 
-***
+---
 
 ## 8. Pistas, tips y lecturas complementarias
 
@@ -361,15 +396,15 @@ usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
    también). Si usas Windows puedes usar la versión completa de [Cmder](https://cmder.net/)
    que incluye [Git bash](https://git-scm.com/download/win) y si tienes Windows
    10 o superior puedes usar [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-3. Una de las integrantes del equipo debe realizar un :fork_and_knife:
+3. Una de las integrantes del equipo debe realizar un :fork*and_knife:
    [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
+   tus \_coaches* te compartirán un _link_ a un repo y te darán acceso de lectura
    en ese repo. La otra integrante del equipo deber hacer un fork **del
    repositorio de su compañera** y
    [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
    hacia el mismo.
-4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
+4. :arrow*down: [Clona](https://help.github.com/articles/cloning-a-repository/)
+   tu \_fork* a tu computadora (copia local).
 5. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
    asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
 6. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
@@ -409,30 +444,30 @@ Control de versiones y trabajo colaborativo con Git y GitHub:
 
 Diseño de experiencia de usuario (User Experience Design):
 
-* Ideación
-* Prototipado (sketching)
-* Testeo e Iteración
+- Ideación
+- Prototipado (sketching)
+- Testeo e Iteración
 
 Desarrollo Front-end:
 
-* Valores
-* Tipos
-* Variables
-* Control de flujo
-* Tests unitarios
-* [Aprende más sobre `charCodeAt()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt)
-* [Aprende más sobre `String.fromCharCode()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode)
-* [Aprende más sobre `ASCII`](http://conceptodefinicion.de/ascii/)
-* [Documentación de NPM](https://docs.npmjs.com/)
+- Valores
+- Tipos
+- Variables
+- Control de flujo
+- Tests unitarios
+- [Aprende más sobre `charCodeAt()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt)
+- [Aprende más sobre `String.fromCharCode()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode)
+- [Aprende más sobre `ASCII`](http://conceptodefinicion.de/ascii/)
+- [Documentación de NPM](https://docs.npmjs.com/)
 
 Organización del Trabajo:
 
-* [Metodologías Ágiles](https://www.youtube.com/watch?v=v3fLx7VHxGM)
-* [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
-* [Scrum en Detalle](https://www.youtube.com/watch?v=nOlwF3HRrAY&t=297s). No
+- [Metodologías Ágiles](https://www.youtube.com/watch?v=v3fLx7VHxGM)
+- [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
+- [Scrum en Detalle](https://www.youtube.com/watch?v=nOlwF3HRrAY&t=297s). No
   esperamos que hagas todo eso desde este proyecto. Iremos profundizando poco a
   poco a lo largo del -_bootcamp_.
-* [Guía para Cifrado César](https://docs.google.com/presentation/d/e/2PACX-1vTQ7-8LZDHrT4Y6AOBN72Nkfz1eJAeseBHpcHX8BSq0aFCFoZmuMjluMeyFNgK9ISKxTz0H03yGfJiT/pub?start=false&loop=false&delayms=60000)
+- [Guía para Cifrado César](https://docs.google.com/presentation/d/e/2PACX-1vTQ7-8LZDHrT4Y6AOBN72Nkfz1eJAeseBHpcHX8BSq0aFCFoZmuMjluMeyFNgK9ISKxTz0H03yGfJiT/pub?start=false&loop=false&delayms=60000)
 
 ## 9. Checklist
 
@@ -440,27 +475,27 @@ Esta sección está para ayudarte a llevar un control de lo que vas completando.
 
 ### Parte Obligatoria
 
-* [ ] `README.md` incluye info sobre proceso y decisiones de diseño.
-* [ ] `README.md` explica claramente quiénes son los usuarios y su relación con
-  el producto.
-* [ ] `README.md` explica claramente cómo el producto soluciona los
-  problemas/necesidades de los usuarios.
-* [ ] Usa VanillaJS.
-* [ ] Implementa `cipher.encode`.
-* [ ] Implementa `cipher.decode`.
-* [ ] Pasa linter con configuración provista.
-* [ ] Pasa pruebas unitarias.
-* [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
-  mínimo del 50% de _branches_.
-* [ ] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el
-  cifrado/descifrado.
-* [ ] Interfaz permite escribir un texto para ser cifrado.
-* [ ] Interfaz muestra el resultado del cifrado correctamente.
-* [ ] Interfaz permite escribir un texto para ser descifrado.
-* [ ] Interfaz muestra el resultado del descifrado correctamente.
+- [ ] `README.md` incluye info sobre proceso y decisiones de diseño.
+- [ ] `README.md` explica claramente quiénes son los usuarios y su relación con
+      el producto.
+- [ ] `README.md` explica claramente cómo el producto soluciona los
+      problemas/necesidades de los usuarios.
+- [ ] Usa VanillaJS.
+- [ ] Implementa `cipher.encode`.
+- [ ] Implementa `cipher.decode`.
+- [ ] Pasa linter con configuración provista.
+- [ ] Pasa pruebas unitarias.
+- [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
+      mínimo del 50% de _branches_.
+- [ ] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el
+      cifrado/descifrado.
+- [ ] Interfaz permite escribir un texto para ser cifrado.
+- [ ] Interfaz muestra el resultado del cifrado correctamente.
+- [ ] Interfaz permite escribir un texto para ser descifrado.
+- [ ] Interfaz muestra el resultado del descifrado correctamente.
 
 ### Parte Opcional: "Hacker edition"
 
-* [ ] Cifra/descifra minúsculas
-* [ ] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
-* [ ] Permite usar un `offset` negativo.
+- [ ] Cifra/descifra minúsculas
+- [ ] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
+- [ ] Permite usar un `offset` negativo.
