@@ -10,10 +10,7 @@ cipher.encode=function(positionCipher, wordCipher){
   let encodeWord="";
   // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
   if (positionCipher==26 || positionCipher==-26){
-    if(wordCipher===wordCipher.toLowerCase()){
-      return wordCipher;
-    }
-    return wordCipher.toUpperCase();
+    return wordCipher;
   }
 
   //en caso el valor del numero sea mayor al total del abecedario, realiza un modulo para obtener el valor optimo
@@ -37,7 +34,7 @@ cipher.encode=function(positionCipher, wordCipher){
 
   //separamos la palabra original en un array
   
-  let wordSep = wordCipher.toLowerCase().split('');
+  let wordSep = wordCipher.split('');
   
   //creamos el arrary que modificaremos
   let nuevo = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -57,21 +54,20 @@ cipher.encode=function(positionCipher, wordCipher){
   //recorremos el array de la palabra y ubicamos su posicion en el abecedario original, luego con la posicion ubico en el array modificado el valor nuevo, todo se guarda en un array
   for (var elemento2 of wordSep){
     //reconocer elementos fuera del abecedario como espacios vacios o simbolos
-    if(nuevo.indexOf(elemento2)==-1){
+    if(nuevo.indexOf(elemento2.toLowerCase())==-1){
       temp.push(elemento2);
     }
-    else{
-      temp.push(abc[nuevo.indexOf(elemento2)]);
+    else{//reconoce mayusculas o minusculas
+      if(elemento2===elemento2.toLowerCase()){//minusculas
+        temp.push(abc[nuevo.indexOf(elemento2)]);
+      }
+      else{//mayusculas
+         temp.push((abc[nuevo.indexOf(elemento2.toLowerCase())]).toUpperCase());
+      }
     }
   }
-
   //junto todo el array en una palabra para devolver
   encodeWord=temp.join('');
-
-  if(wordCipher===wordCipher.toLowerCase()){
-    return encodeWord;
-  }
-  encodeWord=encodeWord.toUpperCase();
   return encodeWord;
   
 }
@@ -80,10 +76,7 @@ cipher.decode=function(positionCipher, wordCipher){
   let encodeWord="";
   // en caso el valor del numero sea el total del abecedario devuelve la misma palabra
   if (positionCipher==26 || positionCipher==-26){
-    if(wordCipher===wordCipher.toLowerCase()){
-      return wordCipher;
-    }
-    return wordCipher.toUpperCase();
+    return wordCipher;
   }
 
   //en caso el valor del numero sea mayor al total del abecedario, realiza un modulo para obtener el valor optimo
@@ -106,7 +99,7 @@ cipher.decode=function(positionCipher, wordCipher){
   }
 
   //separamos la palabra original en un array
-  let wordSep = wordCipher.toLowerCase().split('');  
+  let wordSep = wordCipher.split('');  
 
   //creamos el arrary que modificaremos
   let nuevo = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -126,22 +119,24 @@ cipher.decode=function(positionCipher, wordCipher){
   //recorremos el array de la palabra y ubicamos su posicion en el abecedario original, luego con la posicion ubico en el array modificado el valor nuevo, todo se guarda en un array
   for (var elemento2 of wordSep){
     //reconocer elementos fuera del abecedario como espacios vacios o simbolos
-    if(nuevo.indexOf(elemento2)==-1){
+    if(nuevo.indexOf(elemento2.toLowerCase())==-1){
       temp.push(elemento2);
     }
-    else{
-      temp.push(nuevo[abc.indexOf(elemento2)]);
+    else{//reconoce mayusculas o minusculas
+      if(elemento2===elemento2.toLowerCase()){//minusculas
+        temp.push(nuevo[abc.indexOf(elemento2)]);
+      }
+      else{//mayusculas
+         temp.push((nuevo[abc.indexOf(elemento2.toLowerCase())]).toUpperCase());
+      }
     }
   }
 
   //junto todo el array en una palabra para devolver
   encodeWord=temp.join('');
-  if(wordCipher===wordCipher.toLowerCase()){
-    return encodeWord;
-  }
-  encodeWord=encodeWord.toUpperCase();
   return encodeWord;
 }
+
 
 
 //console.log(typeof cipher.encode);
