@@ -8,6 +8,14 @@ btndecifrar.addEventListener("click",decifrar);
 const btncifrar= document.getElementById("btncifrar");
 btncifrar.addEventListener("click",cifrar);
 
+const btnborrar=document.getElementById("borrar");
+btnborrar.addEventListener("click",borrar);
+
+function borrar() {
+  document.getElementById('words').value="";
+  document.getElementById('position').value="";
+}
+
 function validacion(){
   if(document.getElementById('words').value =="" && document.getElementById('position').value==""){
         alert("ingrese los valores");
