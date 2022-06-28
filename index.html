@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" >
+  </head>
+  <body>
+    <header>
+      <div class="logom"><img src="images/cerrar.png" ></div>
+      <div class="titulo">Mensajes Secretos</div></header>
+    <section>
+      <div id="root" class="inicio">
+        <div class="md5 indicaciones">
+        <div class="bloques">
+          <img src="images/niño.png" width="250" alt="450">
+        </div >
+        <div class="bloques">
+          <div class="inmens">
+          <p >Imagina poder enviar mensajitos a otros pero que esten cifrados y solo puedan leerlo con una clave secreta. </p>
+          <p>Ahora es posible con mensajes secretos, ingresa tu mensaje y el numero de llave, cifraremos tu mensaje y te lo mostraremos para que puedas enviarlo.</p>
+          <p>Ven y disfruta de los secretos</p></div>
+        </div>
+      </div>
+        <div class="md5 pantalla">
+        <div class="llave"> 
+          <h2 class="textollave div2">Numero llave del codigo </h2>
+          <input class="inp div2" type="number" id="position" value="3"> <i class="fa fa-key fa-2x"> </i>
+        </div>
+        <div class="bloque-mensaje">
+          <div class="bloque-textos">
+            <div class="bloque-opciones"> <a id="borrar" href="#"><i class="fa fa-trash"></i></a>
+            </div>
+            <div class ="mensaje" >
+              <h2 class="titulos ">Mensaje : </h2>
+            </div>
+          </div>
+          <div class ="mensajes">
+          <textarea class="textmensaje" name="textarea" id="words" rows="5" cols="40">casa</textarea>          
+        </div>
+        </div>
+        <div class ="esbotones">
+          <button class="botones" type="button" id="btncifrar"><i class="fa fa-lock"></i> CIFRAR </button>
+          <button class="botones" type="button" id="btndecifrar"><i class="fa fa-unlock"></i> DECIFRAR </button>
+          
+        </div>
+        <div class="bloque-mensaje">
+          <div class="bloque-textos">
+            <div class="bloque-opciones"> <a id="copiar" href="#"><i class="fa fa-copy"></i></a>
+            </div>
+            <div class ="mensaje" >
+              <h2 class="titulos ">Resultado : </h2>
+            </div>
+          </div>
+          <div class ="mensajes">
+          <textarea class="textmensaje" name="textarea" id="res" rows="5" cols="40"></textarea> 
+        </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <footer >
+      <p class="copyright-text">Copyright &copy; 2022 Desarrollado por Paola Gamarra 
+      </p>
+      <p><a href="mailto:glenypaola.7@gmail.com">glenypaola.7@gmail.com</a></p>
+    </footer>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
